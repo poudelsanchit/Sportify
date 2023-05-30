@@ -1,0 +1,88 @@
+.middle {
+    padding: 30px;
+}
+
+
+.main-header {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.table {
+    color: white;
+    background-color: #121212;
+    border-radius: 12px;
+    height: auto;
+}
+
+.table-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.table-header>div {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px 0 10px 10px;
+    color: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    border-right: 1px solid #252424;
+    border-bottom: 1px solid #252424;
+
+}
+
+.table-header>div:hover {
+    background-color: #3d57d1;
+}
+
+
+.table-header :last-child {
+    border-right: none;
+    border-top-right-radius: 12px;
+}
+
+.standings {
+    border-top-left-radius: 12px;
+
+}
+
+.league {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #252424;
+    background-color: #1f1f1f;
+
+}
+
+
+.league-name {
+    font-size: 0.9rem;
+}
+
+.league-location {
+    font-size: 0.8rem;
+    color: grey;
+}
+
+tr {
+    border-bottom: 1px solid #252424;
+}
+
+tbody {
+    font-size: 14px;
+}
+
+.indexs {
+    border-bottom: 1px solid #252424;
+
+}
+
+.indexs:last-child {
+    border-bottom: 1px solid #0b090a;
+}
