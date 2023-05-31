@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Main/main.css'
+import '../Main/Main.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import TeamRow from '../Main/TeamRow.jsx'
