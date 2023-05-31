@@ -8,7 +8,7 @@ import GroupF from './GroupF'
 import GroupG from './GroupG'
 import GroupH from './GroupH'
 import axios from 'axios'
-import './ucl.css'
+import './UCL.css'
 import { useState, useEffect } from 'react'
 const UCL = () => {
     const [shouldRefresh, setShouldRefresh] = useState(false);
