@@ -1,12 +1,12 @@
 import React from 'react'
-import './Main/Main.css'
+import '../Main/Main.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import TeamRow from './Main/TeamRow.jsx'
-const Bundesliga = () => {
+import TeamRow from '../Main/TeamRow.jsx'
+const Laliga = () => {
     const [team, setTeams] = useState([]);
     const fetchTable = async () => {
-        const teams = await axios.get('https://apiv3.apifootball.com/?action=get_standings&league_id=175&APIkey=a875bbb5a424ceba7ec9c22e5f5e093a512f103a27f00d5b053859fcf0d9f94b');
+        const teams = await axios.get('https://apiv3.apifootball.com/?action=get_standings&league_id=302&APIkey=a875bbb5a424ceba7ec9c22e5f5e093a512f103a27f00d5b053859fcf0d9f94b');
         setTeams(teams.data);
     }
     useEffect(() => {
@@ -22,7 +22,6 @@ const Bundesliga = () => {
 
     return (
         <div className='middle'>
-            <div className="main-header">Football Matches</div>
             <div className="table">
                 <div className="table-header">
                     <div className="standings active">Standings</div>
@@ -33,11 +32,11 @@ const Bundesliga = () => {
                 </div>
                 <div className="league">
                     <div className="league-icon">
-                        <img src="https://cdn.dribbble.com/userupload/7392618/file/original-1806f83f17d2490fa67ed4a8ae99ff5e.png?compress=1&resize=1024x1022" alt="" height={60} className='league-image' />
+                        <img src="https://cdn.dribbble.com/userupload/7392476/file/original-eea45c727891089045c9faac5850b850.png?compress=1&resize=752x" alt="" height={60} className='league-image' />
                     </div>
                     <div className="league-text">
-                        <span className='league-name'>Bundesliga </span><br />
-                        <span className='league-location'>Germany</span>
+                        <span className='league-name'>LaLiga </span><br />
+                        <span className='league-location'>Spain</span>
 
                     </div>
 
@@ -73,4 +72,4 @@ const Bundesliga = () => {
     )
 }
 
-export default Bundesliga
+export default Laliga

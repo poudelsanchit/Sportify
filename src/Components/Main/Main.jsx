@@ -22,7 +22,6 @@ const Main = () => {
 
     return (
         <div className='middle'>
-            <div className="main-header">Football Matches</div>
             <div className="table">
                 <div className="table-header">
                     <div className="standings active">Standings</div>

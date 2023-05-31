@@ -67,3 +67,8 @@ body {
     background-color: #3d57d1;
 
 }
+
+tr:hover {
+    background-color: rgba(170, 170, 170, 0.062);
+    cursor: pointer;
+}
