@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Laliga from '../Leagues/Laliga'
 import About from '../../About'
 import UCL from '../Leagues/UCL/UCL.jsx'
-import UEL from '../Leagues/UEL'
+import UEL from '../Leagues/UEL/UEL.jsx'
 import SerieA from '../Leagues/SerieA.jsx'
 import Bundesliga from '../Leagues/Bundesliga'
 import Ligue1 from '../Leagues/Ligue1'
