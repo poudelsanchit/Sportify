@@ -35,7 +35,7 @@ const Laliga = () => {
                         <img src="https://cdn.dribbble.com/userupload/7392476/file/original-eea45c727891089045c9faac5850b850.png?compress=1&resize=752x" alt="" height={60} className='league-image' />
                     </div>
                     <div className="league-text">
-                        <span className='league-name'>LaLiga </span><br />
+                        <span className='league-name'>La Liga </span><br />
                         <span className='league-location'>Spain</span>
 
                     </div>
