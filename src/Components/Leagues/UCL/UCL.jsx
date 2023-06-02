@@ -14,10 +14,12 @@ const UCL = () => {
     const [shouldRefresh, setShouldRefresh] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false);
     const [team, setGroupA] = useState([]);
-    const [groupB, setGroupB] = useState([]);
+    const [toggleState, setToggleState] = useState(1);
 
+    const togglePage = (index) => {
+        console.log(index)
 
-
+    }
     const fetchTable = async () => {
         const teams = await axios.get('https://apiv3.apifootball.com/?action=get_standings&league_id=3&APIkey=a875bbb5a424ceba7ec9c22e5f5e093a512f103a27f00d5b053859fcf0d9f94b');
         setGroupA(teams.data);
@@ -29,14 +31,15 @@ const UCL = () => {
 
 
     return (
+
         <div className='middle'>
 
             <div className="table">
                 <div className="table-header">
-                    <div className="standings active">Standings</div>
-                    <div className="fixtures">Fixtures</div>
-                    <div className="stats">Stats</div>
-                    <div className="players">Players</div>
+                    <div className="standings active" onClick={() => { togglePage(1) }}>Standings</div>
+                    <div className="fixtures" onClick={() => { togglePage(2) }}>Fixtures</div>
+                    <div className="stats" onClick={() => { togglePage(3) }}>Stats</div>
+                    <div className="players" onClick={() => { togglePage(4) }}>Players</div>
                 </div>
                 <div className="league">
                     <div className="league-icon">
@@ -45,9 +48,7 @@ const UCL = () => {
                     <div className="league-text">
                         <span className='league-name'>UEFA Champions League</span><br />
                         <span className='league-location'>Europe</span>
-
                     </div>
-
                 </div>
                 {isLoaded ?
                     <>
