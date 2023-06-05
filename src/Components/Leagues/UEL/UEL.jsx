@@ -10,7 +10,16 @@ import GroupH from './GroupH'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import './UEL.css'
+import Fixtures from '../Fixtures/Fixtures'
+import Stats from '../Stats/Stats'
+import Players from '../Players/Players'
 const UEL = () => {
+    const [toggleState, setToggleState] = useState(1);
+    const togglePage = (index) => {
+        console.log(index)
+        setToggleState(index);
+    }
+
     const [shouldRefresh, setShouldRefresh] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false);
     const [team, setGroupA] = useState([]);
@@ -33,10 +42,10 @@ const UEL = () => {
 
                 <div className="table">
                     <div className="table-header">
-                        <div className="standings active">Standings</div>
-                        <div className="fixtures">Fixtures</div>
-                        <div className="stats">Stats</div>
-                        <div className="players">Players</div>
+                        <div className={toggleState === 1 ? 'standings active' : 'standings'} onClick={() => togglePage(1)}>Standings</div >
+                        <div className={toggleState === 2 ? 'fixtures active' : 'fixtures '} onClick={() => togglePage(2)}>Fixtures</div>
+                        <div className={toggleState === 3 ? 'stats active' : 'stats'} onClick={() => togglePage(3)}>Stats</div>
+                        <div className={toggleState === 4 ? 'players active' : 'players'} onClick={() => togglePage(4)}>Players</div>
                     </div>
                     <div className="league">
                         <div className="league-icon">
@@ -50,8 +59,8 @@ const UEL = () => {
 
                     </div>
                     {
-                        isLoaded ? <>
-                            <GroupA groupA={team} />
+                        (isLoaded && toggleState == 1) ? <>
+                            < GroupA groupA={team} />
                             <GroupB groupB={team} />
                             <GroupC groupC={team} />
                             <GroupD groupD={team} />
@@ -62,11 +71,14 @@ const UEL = () => {
                         </> : null
                     }
 
+                    {toggleState == 2 ? <Fixtures /> : null}
+                    {toggleState == 3 ? <Stats /> : null}
+                    {toggleState == 4 ? <Players /> : null}
 
 
                 </div>
 
-            </div>
+            </div >
         </>
     )
 }

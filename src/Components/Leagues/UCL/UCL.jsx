@@ -10,16 +10,19 @@ import GroupH from './GroupH'
 import axios from 'axios'
 import './UCL.css'
 import { useState, useEffect } from 'react'
+import Fixtures from '../Fixtures/Fixtures'
+import Stats from '../Stats/Stats'
+import Players from '../Players/Players'
 const UCL = () => {
+    const [toggleState, setToggleState] = useState(1);
+    const togglePage = (index) => {
+        console.log(index)
+        setToggleState(index);
+    }
     const [shouldRefresh, setShouldRefresh] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false);
     const [team, setGroupA] = useState([]);
-    const [toggleState, setToggleState] = useState(1);
 
-    const togglePage = (index) => {
-        console.log(index)
-
-    }
     const fetchTable = async () => {
         const teams = await axios.get('https://apiv3.apifootball.com/?action=get_standings&league_id=3&APIkey=a875bbb5a424ceba7ec9c22e5f5e093a512f103a27f00d5b053859fcf0d9f94b');
         setGroupA(teams.data);
@@ -36,10 +39,10 @@ const UCL = () => {
 
             <div className="table">
                 <div className="table-header">
-                    <div className="standings active" onClick={() => { togglePage(1) }}>Standings</div>
-                    <div className="fixtures" onClick={() => { togglePage(2) }}>Fixtures</div>
-                    <div className="stats" onClick={() => { togglePage(3) }}>Stats</div>
-                    <div className="players" onClick={() => { togglePage(4) }}>Players</div>
+                    <div className={toggleState === 1 ? 'standings active' : 'standings'} onClick={() => togglePage(1)}>Standings</div >
+                    <div className={toggleState === 2 ? 'fixtures active' : 'fixtures '} onClick={() => togglePage(2)}>Fixtures</div>
+                    <div className={toggleState === 3 ? 'stats active' : 'stats'} onClick={() => togglePage(3)}>Stats</div>
+                    <div className={toggleState === 4 ? 'players active' : 'players'} onClick={() => togglePage(4)}>Players</div>
                 </div>
                 <div className="league">
                     <div className="league-icon">
@@ -50,7 +53,7 @@ const UCL = () => {
                         <span className='league-location'>Europe</span>
                     </div>
                 </div>
-                {isLoaded ?
+                {(isLoaded && toggleState == 1) ?
                     <>
                         <GroupA groupA={team} />
                         <GroupB groupB={team} />
@@ -62,6 +65,9 @@ const UCL = () => {
                         <GroupH groupH={team} />
                     </> : null}
 
+                {toggleState == 2 ? <Fixtures /> : null}
+                {toggleState == 3 ? <Stats /> : null}
+                {toggleState == 4 ? <Players /> : null}
 
 
 
