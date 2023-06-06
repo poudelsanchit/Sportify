@@ -4,12 +4,12 @@ const PopularLiveMatches = () => {
   const legends = [{
     name: ' Cristiano Ronaldo',
     img: "https://i.pinimg.com/750x/65/0a/f0/650af073c4d8b386381321e8f0bb66e8.jpg",
-    goals: '835 Career Goals'
+    goals: '837 Career Goals'
   },
    {
     name: ' Lionel Messi',
     img: "https://i.pinimg.com/564x/47/06/37/47063765bf229b2f6e4bdd5037fcb70a.jpg",
-    goals: '805 Carrer Goals'
+    goals: '806 Carrer Goals'
 
 
   },{
