@@ -5,7 +5,6 @@ import axios from 'axios'
 import Standings from './Standings/Standings'
 import Fixtures from './Fixtures/Fixtures'
 import Stats from './Stats/Stats'
-import Players from './Players/Players'
 const Laliga = () => {
     const league_id = 302;
 

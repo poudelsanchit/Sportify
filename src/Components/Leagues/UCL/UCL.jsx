@@ -12,7 +12,6 @@ import './UCL.css'
 import { useState, useEffect } from 'react'
 import Fixtures from '../Fixtures/Fixtures'
 import Stats from '../Stats/Stats'
-import Players from '../Players/Players'
 const UCL = () => {
     const [toggleState, setToggleState] = useState(1);
     const league_id = 3;

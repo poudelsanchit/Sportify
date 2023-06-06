@@ -2,11 +2,9 @@ import React from 'react'
 import '../Main/Main.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import TeamRow from '../Main/TeamRow.jsx'
 import Standings from './Standings/Standings'
 import Fixtures from './Fixtures/Fixtures'
 import Stats from './Stats/Stats'
-import Players from './Players/Players'
 const Ligue1 = () => {
     const league_id = 168;
 
