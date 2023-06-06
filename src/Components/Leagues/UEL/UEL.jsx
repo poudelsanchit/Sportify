@@ -73,7 +73,7 @@ const UEL = () => {
                         </> : null
                     }
 
-                    {toggleState == 2 ? <Fixtures /> : null}
+                    {toggleState == 2 ? <Fixtures league_id={league_id}/> : null}
                     {toggleState == 3 ? <Stats league_id={league_id}/> : null}
                     {toggleState == 4 ? <Players /> : null}
 

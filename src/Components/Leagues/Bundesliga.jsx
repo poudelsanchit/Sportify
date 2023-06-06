@@ -71,7 +71,7 @@ const Bundesliga = () => {
                             return <Standings position={overall_league_position} name={team_name} MP={overall_league_payed} W={overall_league_W} D={overall_league_D} L={overall_league_L} GF={overall_league_GF} GA={overall_league_GA} PTS={overall_league_PTS} />
                         }) : null}
 
-                        {toggleState === 2 ? <Fixtures /> : null}
+                        {toggleState === 2 ? <Fixtures league_id={league_id}/> : null}
 
                         {toggleState === 3 ? <Stats league_id={league_id}/> : null}
                         {toggleState === 4 ? <Players /> : null}
