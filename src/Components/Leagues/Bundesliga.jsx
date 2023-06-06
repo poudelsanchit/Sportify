@@ -37,7 +37,6 @@ const Bundesliga = () => {
                     <div className={toggleState === 1 ? 'standings active' : 'standings'} onClick={() => togglePage(1)}>Standings</div >
                     <div className={toggleState === 2 ? 'fixtures active' : 'fixtures '} onClick={() => togglePage(2)}>Fixtures</div>
                     <div className={toggleState === 3 ? 'stats active' : 'stats'} onClick={() => togglePage(3)}>Stats</div>
-                    <div className={toggleState === 4 ? 'players active' : 'players'} onClick={() => togglePage(4)}>Players</div>
 
                 </div>
                 <div className="league">
@@ -74,7 +73,6 @@ const Bundesliga = () => {
                         {toggleState === 2 ? <Fixtures league_id={league_id}/> : null}
 
                         {toggleState === 3 ? <Stats league_id={league_id}/> : null}
-                        {toggleState === 4 ? <Players /> : null}
 
 
                     </tbody>

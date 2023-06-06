@@ -12,6 +12,7 @@ import UEL from '../Leagues/UEL/UEL.jsx'
 import SerieA from '../Leagues/SerieA.jsx'
 import Bundesliga from '../Leagues/Bundesliga'
 import Ligue1 from '../Leagues/Ligue1'
+import PopularLiveMatches from '../LiveMatches/Legends'
 const Body = () => {
 
     return (
@@ -30,7 +31,7 @@ const Body = () => {
                     <Route path='/about' element={<About />} />
 
                 </Routes>
-                <div className=' right'></div>
+                <PopularLiveMatches/>
             </div>
         </>
     )

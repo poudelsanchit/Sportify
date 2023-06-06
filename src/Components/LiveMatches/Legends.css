@@ -1,0 +1,42 @@
+.Legends{
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    width: 100%;
+    background-color: #121212;
+    margin-top: 30px;
+    height: fit-content;
+}
+.Legend-Header{
+    background-color: #1f1f1f;
+    border-bottom: 1px solid #252424;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 16px;
+    border-start-start-radius: 12px;
+    border-start-end-radius: 12px;
+}
+.legend-list{
+
+    cursor: pointer;
+    border-bottom: 1px solid #252424;
+    font-size: 14px;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.legend-list:hover{
+    background-color: #3d57d1;
+}
+.Legends-list>:last-child{
+    border-bottom: 0px solid #252424;
+
+}
+.image-icon
+{
+    height: 60px;
+    width: 60px;
+    border-radius: 4px;
+    object-fit:cover ;
+}
