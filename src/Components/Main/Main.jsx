@@ -8,13 +8,15 @@ import Stats from '../Leagues/Stats/Stats'
 import Players from '../Leagues/Players/Players'
 
 const Main = () => {
+    const league_id = 152;
+
     const [toggleState, setToggleState] = useState(1);
     const togglePage = (index) => {
         setToggleState(index);
     }
     const [team, setTeams] = useState([]);
     const fetchTable = async () => {
-        const teams = await axios.get('https://apiv3.apifootball.com/?action=get_standings&league_id=152&APIkey=a875bbb5a424ceba7ec9c22e5f5e093a512f103a27f00d5b053859fcf0d9f94b');
+        const teams = await axios.get(`https://apiv3.apifootball.com/?action=get_standings&league_id=${league_id}&APIkey=a875bbb5a424ceba7ec9c22e5f5e093a512f103a27f00d5b053859fcf0d9f94b`);
         setTeams(teams.data);
     }
     useEffect(() => {
@@ -66,7 +68,7 @@ const Main = () => {
 
                         {toggleState === 2 ? <Fixtures /> : null}
 
-                        {toggleState === 3 ? <Stats /> : null}
+                        {toggleState === 3 ? <Stats league_id={league_id}/> : null}
                         {toggleState === 4 ? <Players /> : null}
 
 

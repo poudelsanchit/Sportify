@@ -15,8 +15,8 @@ import Stats from '../Stats/Stats'
 import Players from '../Players/Players'
 const UCL = () => {
     const [toggleState, setToggleState] = useState(1);
+    const league_id = 3;
     const togglePage = (index) => {
-        console.log(index)
         setToggleState(index);
     }
     const [shouldRefresh, setShouldRefresh] = useState(false);
@@ -24,7 +24,7 @@ const UCL = () => {
     const [team, setGroupA] = useState([]);
 
     const fetchTable = async () => {
-        const teams = await axios.get('https://apiv3.apifootball.com/?action=get_standings&league_id=3&APIkey=a875bbb5a424ceba7ec9c22e5f5e093a512f103a27f00d5b053859fcf0d9f94b');
+        const teams = await axios.get(`https://apiv3.apifootball.com/?action=get_standings&league_id=${league_id}&APIkey=a875bbb5a424ceba7ec9c22e5f5e093a512f103a27f00d5b053859fcf0d9f94b`);
         setGroupA(teams.data);
         setIsLoaded(true);
     }
@@ -66,7 +66,7 @@ const UCL = () => {
                     </> : null}
 
                 {toggleState == 2 ? <Fixtures /> : null}
-                {toggleState == 3 ? <Stats /> : null}
+                {toggleState == 3 ? <Stats league_id={league_id}/> : null}
                 {toggleState == 4 ? <Players /> : null}
 
 

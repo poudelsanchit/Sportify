@@ -1,0 +1,22 @@
+tbody>.Stats{
+    margin: 0;
+    padding: 0;
+}
+.Goals{
+    margin: 2px;
+}
+.eachstats-player{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.stats-player-club{
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.player{
+    font-size: 17px;
+}
