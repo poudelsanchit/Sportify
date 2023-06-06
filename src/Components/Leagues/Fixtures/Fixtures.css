@@ -1,0 +1,46 @@
+DatePicker.react-datepicker{
+    padding: 0;
+    background-color: red;
+}
+.react-datepicker__month{
+margin: 0;
+padding: 0;
+}
+.react-datepicker__day-names, .react-datepicker__week{
+    background-color: white;
+}
+.Eachfixtures{
+    display: flex;
+    flex-direction: row;
+}
+.Eachfixtures:hover{
+    background-color: rgba(170, 170, 170, 0.062);
+    cursor: pointer;
+}
+.fixture-left{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.fixture-right{
+    display: flex;
+    flex-direction: row; 
+    flex: 1;
+    align-items: end;
+    justify-content: end;
+    
+}
+.score{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.matchdate{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

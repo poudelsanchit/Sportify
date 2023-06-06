@@ -4,7 +4,7 @@ const Loader = () => {
     return (
         //css is at body.css
         <>
-            <div class="jelly-triangle">
+           <div class="jelly-triangle">
                 <div class="jelly-triangle__dot"></div>
                 <div class="jelly-triangle__traveler"></div>
             </div>
@@ -17,6 +17,7 @@ const Loader = () => {
                     </filter>
                 </defs>
             </svg>
+            
         </>
     )
 }
