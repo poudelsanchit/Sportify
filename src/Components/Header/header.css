@@ -12,51 +12,7 @@ span {
 }
 
 
-.navbar {
-    background-color: #121212;
-    height: 70px;
-    display: flex;
-    flex-direction: row;
-}
 
-.headertext {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.childs {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-.childs.football {
-    flex: 2;
-}
-
-.childs.baseball {
-    flex: 2;
-}
-
-.childs.cricket {
-    flex: 2;
-}
-
-.childs.volleyball {
-    flex: 2;
-}
-
-.mainheadertitle {
-    padding-left: 20px;
-}
-
-.headertext {
-    font-size: 30px;
-}
 
 ::-webkit-scrollbar {
     width: 0px;
@@ -81,83 +37,96 @@ button svg {
 }
 
 
-.loader {
-    animation: rotate 1s infinite;
-    height: 50px;
-    width: 50px;
+
+/* test header */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #121212;
+    padding: 0.1rem 2rem 0 1rem;
+}
+.header-icons{
+    display: none;
+}
+.button1{
+    display: none;
+}
+.nav {
+    max-width: 100%;
+    height: 3 rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.loader:before,
-.loader:after {
-    border-radius: 50%;
-    content: '';
-    display: block;
-    height: 20px;
-    width: 20px;
+.nav__logo {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.loader:before {
-    animation: ball1 1s infinite;
-    background-color: #cb2025;
-    box-shadow: 30px 0 0 #f8b334;
-    margin-bottom: 10px;
+
+@media screen and (min-width:426px) {
+
+    header {
+        padding: 0.1rem;
+
+    }
+
+    .nav {
+        margin: 0 0 0 10px;
+    }
+
+    .logo {
+        font-size: 1px;
+    }
+
+    button {
+        border: none;
+        padding: 10px 10px;
+        margin-right: 10px;
+    }
+
+
 }
 
-.loader:after {
-    animation: ball2 1s infinite;
-    background-color: #00a096;
-    box-shadow: 30px 0 0 #97bf0d;
+
+@media screen and (min-width:769px) {
+    .header-icons{
+        display: non;
+    }
+    .button1{
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+
+    .nav {
+        justify-content: space-between;
+    }
+    .header-icons{
+        padding: 10px;
+        border-radius: 12px;
+    }
+    .header-icons:hover{
+        background-color: #3d57d1;
+        transition: 0.5s; 
+        cursor: pointer;
+       }
 }
-
-@keyframes rotate {
-    0% {
-        -webkit-transform: rotate(0deg) scale(0.8);
-        -moz-transform: rotate(0deg) scale(0.8);
+@media screen and (min-width:900px) {
+    .header-icons{
+        display: block;
+    }
+    .button1{
+        display: block;
     }
 
-    50% {
-        -webkit-transform: rotate(360deg) scale(1.2);
-        -moz-transform: rotate(360deg) scale(1.2);
-    }
-
-    100% {
-        -webkit-transform: rotate(720deg) scale(0.8);
-        -moz-transform: rotate(720deg) scale(0.8);
-    }
-}
-
-@keyframes ball1 {
-    0% {
-        box-shadow: 30px 0 0 #f8b334;
-    }
-
-    50% {
-        box-shadow: 0 0 0 #f8b334;
-        margin-bottom: 0;
-        -webkit-transform: translate(15px, 15px);
-        -moz-transform: translate(15px, 15px);
-    }
-
-    100% {
-        box-shadow: 30px 0 0 #f8b334;
-        margin-bottom: 10px;
-    }
-}
-
-@keyframes ball2 {
-    0% {
-        box-shadow: 30px 0 0 #97bf0d;
-    }
-
-    50% {
-        box-shadow: 0 0 0 #97bf0d;
-        margin-top: -20px;
-        -webkit-transform: translate(15px, 15px);
-        -moz-transform: translate(15px, 15px);
-    }
-
-    100% {
-        box-shadow: 30px 0 0 #97bf0d;
-        margin-top: 0;
-    }
 }

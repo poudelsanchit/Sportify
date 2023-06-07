@@ -7,6 +7,7 @@ import Fixtures from '../Leagues/Fixtures/Fixtures'
 import Stats from '../Leagues/Stats/Stats'
 
 const Main = () => {
+    document.title= 'Premier League'; //adds individual title
     const league_id = 152;
     
     const [toggleState, setToggleState] = useState(1);

@@ -17,7 +17,7 @@ const Body = () => {
 
     return (
         <>
-            <div className="container-fluid d-xxl-flex justify-content-between ">
+         <div className="body-main">
                 <PopularLeagues />
                 <Routes>
                     <Route index element={<Main />} />

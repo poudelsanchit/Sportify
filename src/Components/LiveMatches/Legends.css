@@ -40,3 +40,10 @@
     border-radius: 4px;
     object-fit:cover ;
 }
+
+@media (max-width:1024px)
+{
+    .Legends{
+        display: none;
+    }
+}
