@@ -13,11 +13,13 @@ import SerieA from '../Leagues/SerieA.jsx'
 import Bundesliga from '../Leagues/Bundesliga'
 import Ligue1 from '../Leagues/Ligue1'
 import PopularLiveMatches from '../LiveMatches/Legends'
+import Sidebar from '../../Sidebar/Sidebar'
 const Body = () => {
 
     return (
         <>
          <div className="body-main">
+            <Sidebar/>
                 <PopularLeagues />
                 <Routes>
                     <Route index element={<Main />} />

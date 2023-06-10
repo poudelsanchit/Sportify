@@ -5,7 +5,7 @@ body {
 .body-main{
     display: flex;
     flex-direction: row; 
-    padding: 4rem 1rem 0 1rem;
+    padding: 4rem 1rem 0 0rem;
 }
 .popular-leagues-section {
     flex: 1.2;
@@ -185,5 +185,9 @@ tbody.fixtures-body {
 {
     .popular-leagues-section {
                         display: none;
+                     }
+
+                     .middle{
+                        margin-left: 4rem;
                      }
 }

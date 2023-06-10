@@ -92,6 +92,9 @@ header {
         padding: 10px 10px;
         margin-right: 10px;
     }
+    .sidebar{
+        display: none;
+    }
 
 
 }
