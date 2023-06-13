@@ -13,6 +13,8 @@ import { useState, useEffect } from 'react'
 import Fixtures from '../Fixtures/Fixtures'
 import Stats from '../Stats/Stats'
 const UCL = () => {
+    document.title = 'UCL'; //adds individual title
+
     const [toggleState, setToggleState] = useState(1);
     const league_id = 3;
     const togglePage = (index) => {
@@ -63,8 +65,8 @@ const UCL = () => {
                         <GroupH groupH={team} />
                     </> : null}
 
-                {toggleState == 2 ? <Fixtures league_id={league_id}/> : null}
-                {toggleState == 3 ? <Stats league_id={league_id}/> : null}
+                {toggleState == 2 ? <Fixtures league_id={league_id} /> : null}
+                {toggleState == 3 ? <Stats league_id={league_id} /> : null}
 
 
 

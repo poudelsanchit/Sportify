@@ -7,9 +7,9 @@ import Fixtures from '../Leagues/Fixtures/Fixtures'
 import Stats from '../Leagues/Stats/Stats'
 
 const Main = () => {
-    document.title= 'Premier League'; //adds individual title
+    document.title = 'Premier League'; //adds individual title
     const league_id = 152;
-    
+
     const [toggleState, setToggleState] = useState(1);
     const togglePage = (index) => {
         setToggleState(index);
@@ -32,7 +32,6 @@ const Main = () => {
                     <div className={toggleState === 1 ? 'standings active' : 'standings'} onClick={() => togglePage(1)}>Standings</div >
                     <div className={toggleState === 2 ? 'fixtures active' : 'fixtures '} onClick={() => togglePage(2)}>Fixtures</div>
                     <div className={toggleState === 3 ? 'stats active' : 'stats'} onClick={() => togglePage(3)}>Stats</div>
-
                 </div>
                 <div className="league">
                     <div className="league-icon">
@@ -65,9 +64,9 @@ const Main = () => {
                             return <Standings position={overall_league_position} name={team_name} MP={overall_league_payed} W={overall_league_W} D={overall_league_D} L={overall_league_L} GF={overall_league_GF} GA={overall_league_GA} PTS={overall_league_PTS} />
                         }) : null}
 
-                        {toggleState === 2 ? <Fixtures league_id={league_id}/> : null}
+                        {toggleState === 2 ? <Fixtures league_id={league_id} /> : null}
 
-                        {toggleState === 3 ? <Stats league_id={league_id}/> : null}
+                        {toggleState === 3 ? <Stats league_id={league_id} /> : null}
 
 
                     </tbody>
